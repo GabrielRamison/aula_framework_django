@@ -1,0 +1,1 @@
+SELECT * FROM aula.django_content_type;
