@@ -3,7 +3,7 @@ from django.db import models
 from meuapp.models.base import BaseModel
 
 class Account(BaseModel):
-    comer = models.ManyToManyField(User, verbose_name='Account Owner')
+    owner = models.ManyToManyField(User, verbose_name='Account Owner')
     description = models.CharField(max_length=200, verbose_name='Description for your account')
     number = models.CharField(max_length=20, help_text='Insert your account number here')
     balance = models.FloatField(default=8, help_text='Insert your inicial balance')
